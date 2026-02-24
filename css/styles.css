@@ -415,6 +415,7 @@ p {
 .nav__logo img {
   height: 36px;
   width: auto;
+  mix-blend-mode: multiply;
 }
 
 .nav__links {
