@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact BlockTrustIRA — Schedule a Consultation</title>
+  <meta name="description" content="Schedule a free consultation with BlockTrustIRA. No pressure, no sales pitch — just a conversation about whether a managed crypto IRA belongs in your retirement plan.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <div class="nav__logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        BlockTrustIRA
+      </a>
+      <ul class="nav__links">
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="managed-ira.html">Managed IRA</a></li>
+        <li><a href="our-fees.html">Our Fees</a></li>
+        <li><a href="learn-crypto-ira.html">Learn</a></li>
+        <li><a href="compare/best-crypto-ira-companies.html">Compare</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a href="contact.html" class="btn btn--primary btn--sm">Schedule a Consultation</a>
+      </div>
+      <button class="nav__hamburger" aria-label="Menu" onclick="document.querySelector('.nav__mobile-menu').classList.toggle('active')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile-menu">
+      <a href="how-it-works.html">How It Works</a>
+      <a href="managed-ira.html">Managed IRA</a>
+      <a href="our-fees.html">Our Fees</a>
+      <a href="learn-crypto-ira.html">Learn</a>
+      <a href="compare/best-crypto-ira-companies.html">Compare</a>
+      <a href="about.html">About</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html" class="btn btn--primary">Schedule a Consultation</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero hero--gradient">
+    <div class="container" style="max-width: 700px; text-align: center;">
+      <h1>Let's Have a Conversation</h1>
+      <p class="lead">No pressure. No sales pitch. Just a conversation about whether a managed crypto IRA belongs in your retirement plan.</p>
+    </div>
+  </section>
+
+  <!-- Hero Image Band -->
+  <div class="hero-image-band">
+    <img src="images/couple-tablet-kitchen.png" alt="Couple reviewing retirement portfolio together at home" loading="eager">
+  </div>
+
+  <!-- Phone Banner -->
+  <div class="stat-strip reveal" style="grid-template-columns: 1fr;">
+    <div class="stat-strip__item" style="border-right: none; padding: 2rem;">
+      <div class="stat-strip__value" style="font-size: clamp(1.8rem, 4vw, 2.5rem);"><a href="tel:+18776496732" style="color: var(--ink); text-decoration: none;">(877) 649-6732</a></div>
+      <div class="stat-strip__label" style="font-size: 0.9rem; margin-top: 0.25rem;">Monday &ndash; Friday, 6:00 AM &ndash; 5:00 PM PST</div>
+    </div>
+  </div>
+
+  <!-- Contact Form & Sidebar -->
+  <section class="section reveal">
+    <div class="container">
+      <div class="grid grid--2" style="align-items: start; gap: 4rem;">
+
+        <!-- Form -->
+        <div>
+          <div class="section-tag">Book a Consultation</div>
+          <h2>Tell Us a Little About Yourself</h2>
+          <p>Fill out the form below and a member of our team will reach out within one business day to schedule your consultation.</p>
+
+          <form style="margin-top: 2rem;">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="John Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+            </div>
+            <div class="form-group">
+              <label for="best-time">Best Time to Call</label>
+              <select id="best-time" name="best-time">
+                <option value="" disabled selected>Select a time window</option>
+                <option value="morning">Morning (6:00 AM &ndash; 9:00 AM PST)</option>
+                <option value="mid-morning">Mid-Morning (9:00 AM &ndash; 12:00 PM PST)</option>
+                <option value="afternoon">Afternoon (12:00 PM &ndash; 3:00 PM PST)</option>
+                <option value="late-afternoon">Late Afternoon (3:00 PM &ndash; 5:00 PM PST)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="assets">Current Retirement Assets</label>
+              <select id="assets" name="assets">
+                <option value="" disabled selected>Select a range</option>
+                <option value="under-50k">Under $50,000</option>
+                <option value="50k-100k">$50,000 &ndash; $100,000</option>
+                <option value="100k-250k">$100,000 &ndash; $250,000</option>
+                <option value="250k-500k">$250,000 &ndash; $500,000</option>
+                <option value="500k-1m">$500,000 &ndash; $1,000,000</option>
+                <option value="over-1m">Over $1,000,000</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message (Optional)</label>
+              <textarea id="message" name="message" placeholder="Tell us about your retirement goals, questions, or anything you'd like to discuss."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg" style="width: 100%; margin-top: 0.5rem;">Schedule a Consultation</button>
+          </form>
+        </div>
+
+        <!-- Sidebar -->
+        <div>
+          <!-- What to Expect -->
+          <div class="card card--lg" style="margin-bottom: 2rem;">
+            <h4>What to Expect</h4>
+            <div class="step" style="margin-bottom: 1.5rem;">
+              <div class="step__number" style="width: 40px; height: 40px; min-width: 40px; font-size: 1rem;">1</div>
+              <div class="step__content">
+                <h4 style="font-size: 0.95rem; margin-bottom: 0.25rem;">A Brief Conversation</h4>
+                <p style="font-size: 0.9rem; margin: 0;">15 to 20 minutes. We discuss your retirement goals and answer your questions.</p>
+              </div>
+            </div>
+            <div class="step" style="margin-bottom: 1.5rem;">
+              <div class="step__number" style="width: 40px; height: 40px; min-width: 40px; font-size: 1rem;">2</div>
+              <div class="step__content">
+                <h4 style="font-size: 0.95rem; margin-bottom: 0.25rem;">No Obligation</h4>
+                <p style="font-size: 0.9rem; margin: 0;">This is educational, not transactional. You decide if a managed crypto IRA is right for you.</p>
+              </div>
+            </div>
+            <div class="step" style="margin-bottom: 0;">
+              <div class="step__number" style="width: 40px; height: 40px; min-width: 40px; font-size: 1rem;">3</div>
+              <div class="step__content">
+                <h4 style="font-size: 0.95rem; margin-bottom: 0.25rem;">Honest Assessment</h4>
+                <p style="font-size: 0.9rem; margin: 0;">If this is not the right fit for your portfolio, we will tell you. Our reputation depends on it.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trust Signals -->
+          <div class="card card--lg card--purple">
+            <h4>Why Investors Trust Us</h4>
+            <ul style="list-style: none; padding: 0;">
+              <li style="display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 1.25rem;">
+                <span style="color: var(--green); font-size: 1.2rem; line-height: 1;">&#10003;</span>
+                <div>
+                  <strong style="display: block; font-size: 0.9rem; color: var(--ink);">sFOX Custody</strong>
+                  <span style="font-size: 0.85rem; color: var(--text-light);">Qualified custodian. Your assets are legally yours.</span>
+                </div>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 1.25rem;">
+                <span style="color: var(--green); font-size: 1.2rem; line-height: 1;">&#10003;</span>
+                <div>
+                  <strong style="display: block; font-size: 0.9rem; color: var(--ink);">$200M Insurance</strong>
+                  <span style="font-size: 0.85rem; color: var(--text-light);">Specific, verifiable custody insurance coverage.</span>
+                </div>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 0;">
+                <span style="color: var(--green); font-size: 1.2rem; line-height: 1;">&#10003;</span>
+                <div>
+                  <strong style="display: block; font-size: 0.9rem; color: var(--ink);">Zero Setup Fees</strong>
+                  <span style="font-size: 0.85rem; color: var(--text-light);">$0 to open. $0 to close. No lock-ups.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section section--dark reveal">
+    <div class="container">
+      <div class="section-tag section-tag--light">Prefer to Call?</div>
+      <h2 style="color: #fff;">Speak With Our Team Directly</h2>
+      <p class="lead" style="color: rgba(255,255,255,0.7);">Call <a href="tel:+18776496732" style="color: var(--purple-soft);">(877) 649-6732</a> during business hours. Monday through Friday, 6:00 AM to 5:00 PM PST.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="index.html" class="footer__brand">
+            <div class="nav__logo-icon" style="background: var(--purple);">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            BlockTrustIRA
+          </a>
+          <p class="footer__desc">AI-managed cryptocurrency IRAs designed for long-term retirement planning. Institutional-grade security. Process-driven management.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="advisors.html">For Advisors</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="managed-ira.html">Managed IRA</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="our-fees.html">Our Fees</a></li>
+            <li><a href="crypto-security.html">Security</a></li>
+            <li><a href="bitcoin-investment-strategy.html">Investment Strategy</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Learn</h4>
+          <ul>
+            <li><a href="learn-crypto-ira.html">Education Center</a></li>
+            <li><a href="learn/rollover-401k-to-crypto-ira.html">401(k) Rollover Guide</a></li>
+            <li><a href="learn/is-crypto-ira-safe.html">Is a Crypto IRA Safe?</a></li>
+            <li><a href="learn/bitcoin-etf-vs-bitcoin-ira.html">Bitcoin ETF vs IRA</a></li>
+            <li><a href="learn/crypto-ira-tax-advantages.html">Tax Advantages</a></li>
+            <li><a href="learn/crypto-ira-for-beginners.html">Beginners Guide</a></li>
+            <li><a href="compare/best-crypto-ira-companies.html">Compare Providers</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__disclaimer">This is for informational purposes only and does not constitute financial, investment, tax, or legal advice. Cryptocurrency investments are volatile and carry risk, including potential loss of principal. Past performance does not guarantee future results. BlockTrustIRA is not a financial, tax, or legal advisor. Consult qualified professionals before making investment decisions.</p>
+        <p class="footer__copyright">&copy; 2026 BlockTrustIRA. All rights reserved. <a href="privacy-policy.html" style="color: rgba(255,255,255,0.4);">Privacy Policy</a> &middot; <a href="terms.html" style="color: rgba(255,255,255,0.4);">Terms of Service</a> &middot; <a href="disclosures.html" style="color: rgba(255,255,255,0.4);">Disclosures</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal animation
+    const revealElements = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+    revealElements.forEach(el => observer.observe(el));
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
