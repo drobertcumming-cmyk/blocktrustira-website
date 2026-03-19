@@ -44,18 +44,17 @@
   </nav>
 
   <!-- Hero -->
-  <section class="hero hero--gradient">
-    <div class="container">
+  <section class="hero hero--split hero--gradient">
+    <div class="hero__content">
       <div class="hero__badge">
         <span class="pulse"></span>
         $200M Custody Insurance — sFOX
       </div>
-      <h1>How We Protect<br>Your Retirement</h1>
-      <p class="lead" style="max-width: 620px;">Your crypto IRA is secured by $200M in custody insurance, institutional cold storage, and a qualified custodian structure that keeps your assets legally separate from our company.</p>
-      <div class="hero__actions">
-        <a href="contact.html" class="btn btn--primary btn--lg" style="background:#fff; color:var(--ink);">Schedule a Consultation</a>
-        <a href="how-it-works.html" class="btn btn--glass btn--lg">See How It Works</a>
-      </div>
+      <h1>How We Protect Your Retirement</h1>
+      <p class="lead">Your crypto IRA is secured by $200M in custody insurance, institutional cold storage, and a qualified custodian structure that keeps your assets legally separate from our company.</p>
+    </div>
+    <div class="hero__image">
+      <img src="images/grandparents-family.png" alt="Family security — the reason we protect retirement assets with institutional-grade custody" loading="eager">
     </div>
   </section>
 
@@ -94,15 +93,15 @@
   <section class="section section--cool reveal">
     <div class="container">
       <div class="grid grid--2" style="align-items: center;">
+        <div class="section-img section-img--tall">
+          <img src="images/woman-coffee-window.png" alt="Peace of mind — knowing your retirement assets are secured in cold storage" loading="lazy">
+        </div>
         <div>
           <div class="section-tag">Cold Storage</div>
           <h2>Offline by Default</h2>
           <p>The vast majority of client assets are held in cold storage. Cold storage means the private keys that control your cryptocurrency are kept on devices that are not connected to the internet.</p>
           <p>This eliminates the most common attack vector: remote hacking. An attacker cannot steal what they cannot reach online. Only a small portion of assets remains in hot wallets to facilitate trading operations.</p>
           <p>This is the same approach used by institutional investors and major exchanges to protect large holdings.</p>
-        </div>
-        <div class="section-img section-img--tall">
-          <img src="images/grandparents-family.png" alt="Family security — the reason we protect retirement assets with institutional-grade custody" loading="lazy">
         </div>
       </div>
     </div>
@@ -126,15 +125,15 @@
   <section class="section reveal">
     <div class="container">
       <div class="grid grid--2" style="align-items: center;">
-        <div class="section-img section-img--medium">
-          <img src="images/couple-sunset-cliff.png" alt="Couple walking confidently along a sunset coastline — retirement peace of mind" loading="lazy">
-        </div>
         <div>
           <div class="section-tag">Multi-Signature Wallets</div>
           <h2>No Single Point of Failure</h2>
           <p>Moving cryptocurrency requires a private key. Most personal wallets use a single key. If that key is compromised, everything is lost.</p>
           <p>Multi-signature wallets require multiple keys to authorize any transaction. Think of it like a safe deposit box that needs two separate keys turned simultaneously. No single person or device can move your assets alone.</p>
           <p>This protects against both external attacks and internal threats. Even if one key were compromised, the attacker would still need additional keys to access funds.</p>
+        </div>
+        <div class="section-img section-img--medium">
+          <img src="images/couple-sunset-cliff.png" alt="Couple walking confidently along a sunset coastline — retirement peace of mind" loading="lazy">
         </div>
       </div>
     </div>
@@ -144,21 +143,27 @@
   <section class="section section--cool reveal">
     <div class="container">
       <div class="section-tag">Regulatory Compliance</div>
-      <h2>Built for Scrutiny</h2>
-      <p class="lead" style="max-width: 640px;">We designed our security and custody infrastructure to meet regulatory standards, not to avoid them.</p>
-      <div class="grid grid--3" style="margin-top: 2.5rem;">
+      <h2 style="text-align: center;">Built for Scrutiny</h2>
+      <p class="lead" style="max-width: 640px; text-align: center; margin: 0 auto 2.5rem;">We designed our security and custody infrastructure to meet regulatory standards, not to avoid them.</p>
+      <div class="grid grid--3">
         <div class="card card--lg">
-          <div class="card__icon card__icon--green">&#128274;</div>
+          <div class="card__icon card__icon--purple">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
           <h4>Qualified Custodian</h4>
           <p>sFOX operates as a qualified custodian, meeting the regulatory requirements for holding client assets in a fiduciary capacity.</p>
         </div>
         <div class="card card--lg">
-          <div class="card__icon card__icon--purple">&#128196;</div>
+          <div class="card__icon card__icon--purple">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
           <h4>IRS-Compliant Structure</h4>
           <p>All accounts are structured as self-directed IRAs that comply with IRS regulations for alternative asset retirement accounts.</p>
         </div>
         <div class="card card--lg">
-          <div class="card__icon card__icon--green">&#128269;</div>
+          <div class="card__icon card__icon--green">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
           <h4>Full Audit Trail</h4>
           <p>Every trade, rebalance, and allocation change is recorded and available in your quarterly reports. Complete transparency by design.</p>
         </div>
@@ -219,10 +224,10 @@
     <div class="container">
       <div class="section-tag">Take the Next Step</div>
       <h2>Schedule a Consultation</h2>
-      <p class="lead">Have questions about how your retirement assets would be protected? We are happy to walk you through every layer of our security architecture.</p>
+      <p class="lead">No pressure. No sales pitch. Just a conversation about whether a managed crypto IRA belongs in your retirement plan.</p>
       <div class="hero__actions" style="justify-content: center;">
         <a href="contact.html" class="btn btn--primary btn--lg">Schedule a Consultation</a>
-        <a href="bitcoin-investment-strategy.html" class="btn btn--outline btn--lg">Learn About Our Strategy</a>
+        <a href="guides/due-diligence-checklist.html" class="btn btn--outline btn--lg">Download Our Guide</a>
       </div>
     </div>
   </section>
@@ -235,7 +240,6 @@
           <a href="index.html" class="footer__brand">
             <img src="images/blocktrust-logo.png" alt="BlockTrust" height="28">
           </a>
-          <p class="footer__desc">AI-managed cryptocurrency IRAs designed for long-term retirement planning. Institutional-grade security. Process-driven management.</p>
         </div>
         <div class="footer__col">
           <h4>Company</h4>
@@ -269,9 +273,14 @@
           </ul>
         </div>
       </div>
+      <div class="footer__social">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg></a>
+      </div>
       <div class="footer__bottom">
-        <p class="footer__disclaimer">This is for informational purposes only and does not constitute financial, investment, tax, or legal advice. Cryptocurrency investments are volatile and carry risk, including potential loss of principal. Past performance does not guarantee future results. BlockTrustIRA is not a financial, tax, or legal advisor. Consult qualified professionals before making investment decisions.</p>
-        <p class="footer__copyright">&copy; 2026 BlockTrustIRA. All rights reserved. <a href="privacy-policy.html" style="color: rgba(255,255,255,0.4);">Privacy Policy</a> &middot; <a href="terms.html" style="color: rgba(255,255,255,0.4);">Terms of Service</a> &middot; <a href="disclosures.html" style="color: rgba(255,255,255,0.4);">Disclosures</a></p>
+        <p class="footer__copyright">&copy; 2026 BlockTrustIRA LLC. All Rights Reserved. Registration on or use of this site constitutes acceptance of our <a href="terms.html" style="color: rgba(255,255,255,0.4);">Terms and Conditions</a> &middot; <a href="privacy-policy.html" style="color: rgba(255,255,255,0.4);">Privacy Policy</a></p>
+        <p class="footer__disclaimer">The information on this website is for informational purposes only, and is not directed at consumers.</p>
       </div>
     </div>
   </footer>
