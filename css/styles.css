@@ -439,6 +439,8 @@ p {
 /* Dropdown */
 .nav__dropdown {
   position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: -1rem;
 }
 
 .nav__dropdown > a {
@@ -466,7 +468,7 @@ p {
 .nav__dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%;
+  top: calc(100% + 0.25rem);
   left: 50%;
   transform: translateX(-50%);
   min-width: 200px;
@@ -476,17 +478,16 @@ p {
   box-shadow: 0 12px 32px rgba(0,0,0,0.08);
   padding: 0.5rem 0;
   z-index: 1001;
-  margin: 0;
 }
 
 /* Invisible bridge so hover doesn't break crossing the gap */
 .nav__dropdown-menu::before {
   content: '';
   position: absolute;
-  top: -12px;
-  left: 0;
-  right: 0;
-  height: 12px;
+  top: -1.5rem;
+  left: -1rem;
+  right: -1rem;
+  height: 1.5rem;
 }
 
 .nav__dropdown:hover .nav__dropdown-menu {
