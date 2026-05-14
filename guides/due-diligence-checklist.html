@@ -4,10 +4,446 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Before You Choose a Crypto IRA: The Due Diligence Checklist — BlockTrustIRA</title>
-  <meta name="description" content="Download our free due diligence checklist before choosing a crypto IRA provider. Know the right questions to ask about custody, insurance, fees, and security.">
+  <meta name="description" content="Most crypto IRA providers benefit from a confused buyer. This free 10-question checklist shows you exactly what to ask before committing your retirement savings. Download from BlockTrustIRA.">
+  <link rel="canonical" href="https://blocktrustira.com/guides/due-diligence-checklist">
+  <meta property="og:title" content="The Crypto IRA Due Diligence Checklist">
+  <meta property="og:description" content="The 10 questions every crypto IRA provider should be able to answer in writing. A free evaluation framework from BlockTrustIRA.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://blocktrustira.com/guides/due-diligence-checklist">
   <link rel="stylesheet" href="../css/styles.css">
+
+  <style>
+    /* ═════════════════════════════════════════════
+       Page-specific styles — Due Diligence Checklist
+       Prefix: ddc-
+       Tokens/typography/nav/footer inherited from
+       ../css/styles.css
+       ═════════════════════════════════════════════ */
+
+    /* HERO */
+    .ddc-hero {
+      background: var(--ink);
+      position: relative;
+      padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 4vw, 3rem) clamp(5rem, 9vw, 8rem);
+      overflow: hidden;
+    }
+    .ddc-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 20% 10%, rgba(108,92,231,0.15), transparent 60%),
+        radial-gradient(ellipse 60% 40% at 90% 80%, rgba(108,92,231,0.08), transparent 60%);
+      pointer-events: none;
+    }
+    .ddc-hero__inner { position: relative; z-index: 2; max-width: 880px; margin: 0 auto; }
+    .ddc-hero__pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 100px; padding: 7px 18px;
+      margin-bottom: 2rem;
+    }
+    .ddc-hero__dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--green); box-shadow: 0 0 10px rgba(0,184,148,0.6);
+    }
+    .ddc-hero__pill span {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em;
+      text-transform: uppercase; color: rgba(255,255,255,0.6);
+    }
+    .ddc-hero h1 {
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      color: white; margin-bottom: 1.5rem; line-height: 1.05;
+    }
+    .ddc-hero h1 em { font-style: italic; color: var(--purple-soft); }
+    .ddc-hero__sub {
+      font-size: 1.15rem; line-height: 1.7; color: rgba(255,255,255,0.65);
+      max-width: 580px; margin-bottom: 2.5rem; font-weight: 300;
+    }
+    .ddc-hero__btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* SECTION SYSTEM (page-local — does not override site .section) */
+    .ddc-sec { padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 4vw, 3rem); }
+    .ddc-sec--cool { background: var(--bg-cool); }
+    .ddc-sec--warm { background: var(--bg-warm); }
+    .ddc-sec--dark { background: var(--ink); }
+    .ddc-wrap   { max-width: 1200px; margin: 0 auto; }
+    .ddc-narrow { max-width: 760px;  margin: 0 auto; }
+    .ddc-center { text-align: center; }
+
+    .ddc-tag {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--purple);
+      margin-bottom: 1rem;
+    }
+    .ddc-tag::before {
+      content: ''; width: 8px; height: 8px; border-radius: 50%;
+      background: currentColor; opacity: 0.25;
+    }
+    .ddc-tag--light { color: var(--purple-muted); }
+
+    .ddc-h2 { font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 1.25rem; }
+    .ddc-sec--dark .ddc-h2 { color: white; }
+    .ddc-lead {
+      font-size: 1.1rem; line-height: 1.8; font-weight: 300; color: var(--text);
+    }
+    .ddc-sec--dark .ddc-lead { color: rgba(255,255,255,0.65); }
+    .ddc-lead strong { font-weight: 600; color: var(--ink); }
+    .ddc-sec--dark .ddc-lead strong { color: white; }
+
+    /* INTRO */
+    .ddc-intro { max-width: 720px; margin: 0 auto; }
+    .ddc-intro p {
+      font-size: 1.1rem; line-height: 1.8; color: var(--text);
+      font-weight: 300; margin-bottom: 1.25rem;
+    }
+    .ddc-intro p:last-child {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-style: italic; font-size: 1.35rem; color: var(--ink);
+      margin-top: 2rem; padding-top: 2rem;
+      border-top: 2px solid var(--purple);
+      display: inline-block; line-height: 1.4;
+    }
+
+    /* QUESTION CARDS */
+    .ddc-q-stack {
+      max-width: 880px; margin: 3rem auto 0;
+      display: flex; flex-direction: column; gap: 1.25rem;
+    }
+    .ddc-q-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 1.75rem;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .ddc-q-card:hover {
+      box-shadow: 0 16px 48px rgba(0,0,0,0.06);
+      transform: translateY(-2px);
+    }
+    .ddc-q-num {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 2.75rem; color: var(--purple);
+      line-height: 1; opacity: 0.9;
+    }
+    .ddc-q-num-wrap { position: relative; padding-top: 0.25rem; }
+    .ddc-q-num-wrap::after {
+      content: ''; position: absolute;
+      top: 3.5rem; bottom: -1.5rem; left: 50%;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--border), transparent);
+    }
+    .ddc-q-card:last-child .ddc-q-num-wrap::after { display: none; }
+
+    .ddc-q-body h3 { font-size: 1.55rem; margin-bottom: 1rem; line-height: 1.25; }
+    .ddc-q-body p {
+      font-size: 0.98rem; line-height: 1.7;
+      color: var(--text); font-weight: 300; margin-bottom: 0.75rem;
+    }
+    .ddc-q-body a {
+      color: var(--purple);
+      text-decoration: underline;
+      text-decoration-color: rgba(108,92,231,0.35);
+      text-underline-offset: 3px;
+    }
+    .ddc-q-body a:hover { color: var(--purple-dark); }
+
+    .ddc-answer {
+      margin-top: 1.5rem;
+      background: var(--ink);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.75rem;
+      position: relative;
+    }
+    .ddc-answer__label {
+      font-size: 0.62rem; font-weight: 700;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--purple-soft);
+      margin-bottom: 0.6rem;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .ddc-answer__label::before {
+      content: ''; width: 16px; height: 1px;
+      background: var(--purple-soft); opacity: 0.5;
+    }
+    .ddc-answer p {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.98rem; line-height: 1.65;
+      font-weight: 300; margin-bottom: 0.5rem;
+    }
+    .ddc-answer p:last-child { margin-bottom: 0; }
+    .ddc-answer strong { color: white; font-weight: 600; }
+    .ddc-answer em { color: var(--purple-soft); font-style: italic; }
+    .ddc-answer a {
+      color: var(--purple-soft);
+      text-decoration: underline;
+      text-decoration-color: rgba(162,155,254,0.5);
+      text-underline-offset: 3px;
+    }
+    .ddc-answer a:hover { color: white; }
+
+    .ddc-fee-mini {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin: 1rem 0 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .ddc-fee-mini__cell { text-align: left; }
+    .ddc-fee-mini__num {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 1.6rem; color: var(--purple-soft);
+      line-height: 1; margin-bottom: 0.25rem;
+    }
+    .ddc-fee-mini__lbl {
+      font-size: 0.72rem; color: rgba(255,255,255,0.55);
+      font-weight: 300; line-height: 1.4;
+    }
+
+    /* LEAD CAPTURE */
+    .ddc-lead-cap {
+      background: linear-gradient(135deg, var(--purple-dark) 0%, var(--ink) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .ddc-lead-cap::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(circle at 15% 50%, rgba(108,92,231,0.25), transparent 50%),
+        radial-gradient(circle at 85% 50%, rgba(162,155,254,0.15), transparent 50%);
+      pointer-events: none;
+    }
+    .ddc-lead-cap__inner {
+      position: relative; z-index: 2;
+      max-width: 1100px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem; align-items: center;
+    }
+    .ddc-lead-cap__left .ddc-tag { color: var(--purple-soft); }
+    .ddc-lead-cap__left h2 {
+      color: white;
+      font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+      margin-bottom: 1.25rem;
+    }
+    .ddc-lead-cap__left p {
+      color: rgba(255,255,255,0.65);
+      font-size: 1.05rem; line-height: 1.75;
+      font-weight: 300; margin-bottom: 1.5rem;
+    }
+    .ddc-lead-cap__bullets {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 0.75rem;
+    }
+    .ddc-lead-cap__bullets li {
+      display: flex; gap: 10px;
+      font-size: 0.95rem; color: rgba(255,255,255,0.8);
+      font-weight: 300;
+    }
+    .ddc-lead-cap__bullets li::before {
+      content: '→'; color: var(--purple-soft); font-weight: 600;
+    }
+
+    .ddc-form-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+    }
+    .ddc-form-card__head {
+      display: flex; gap: 1rem;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      align-items: center;
+    }
+    .ddc-pdf-preview {
+      width: 64px; height: 80px;
+      background: linear-gradient(135deg, var(--ink) 0%, var(--purple-dark) 100%);
+      border-radius: 6px;
+      flex-shrink: 0; position: relative; overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .ddc-pdf-preview::before {
+      content: '';
+      position: absolute;
+      top: 12px; left: 8px; right: 8px;
+      height: 1.5px;
+      background: var(--purple-soft);
+      box-shadow:
+        0 4px 0 rgba(255,255,255,0.3),
+        0 8px 0 rgba(255,255,255,0.3),
+        0 14px 0 rgba(255,255,255,0.2),
+        0 18px 0 rgba(255,255,255,0.2),
+        0 24px 0 rgba(255,255,255,0.15),
+        0 28px 0 rgba(255,255,255,0.15);
+    }
+    .ddc-pdf-preview::after {
+      content: 'GUIDE';
+      position: absolute; bottom: 8px; left: 0; right: 0;
+      text-align: center;
+      font-size: 0.5rem;
+      color: var(--purple-soft);
+      font-weight: 700; letter-spacing: 0.1em;
+    }
+    .ddc-form-card__head h4 { font-size: 1.1rem; margin-bottom: 0.25rem; }
+    .ddc-form-card__head p {
+      font-size: 0.82rem; color: var(--text-light); font-weight: 400;
+    }
+    .ddc-field { display: flex; flex-direction: column; margin-bottom: 1rem; }
+    .ddc-field label {
+      font-size: 0.72rem;
+      font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--text-light);
+      margin-bottom: 0.5rem;
+    }
+    .ddc-field input {
+      font-family: inherit; font-size: 0.95rem;
+      padding: 14px 16px;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      color: var(--ink);
+      background: var(--bg-warm);
+      transition: border 0.2s, background 0.2s;
+    }
+    .ddc-field input:focus {
+      outline: none;
+      border-color: var(--purple);
+      background: white;
+    }
+    .ddc-submit {
+      width: 100%; margin-top: 0.75rem;
+      padding: 16px; border-radius: 12px;
+      background: var(--ink); color: white;
+      font-family: inherit; font-size: 0.95rem; font-weight: 600;
+      border: none; cursor: pointer;
+      transition: all 0.25s;
+      display: inline-flex; align-items: center;
+      justify-content: center; gap: 8px;
+    }
+    .ddc-submit:hover {
+      background: var(--purple);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 30px rgba(108,92,231,0.3);
+    }
+    .ddc-form-trust {
+      text-align: center; margin-top: 1rem;
+      font-size: 0.78rem; color: var(--text-light); font-weight: 300;
+    }
+
+    /* WHY WE PUBLISH */
+    .ddc-publish { max-width: 720px; margin: 0 auto; text-align: center; }
+    .ddc-publish p {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
+      line-height: 1.4; color: white;
+      margin-bottom: 0.5rem;
+    }
+    .ddc-publish__attr {
+      display: block; margin-top: 1.5rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--purple-soft);
+    }
+
+    /* QUICK REF TABLE */
+    .ddc-ref-wrap { max-width: 880px; margin: 3rem auto 0; }
+    .ddc-ref-table {
+      width: 100%; border-collapse: collapse;
+      background: white;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+      border: 1px solid var(--border);
+    }
+    .ddc-ref-table th {
+      text-align: left;
+      padding: 1.25rem 1.5rem;
+      background: var(--bg-cool);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--text-light);
+      border-bottom: 1px solid var(--border);
+    }
+    .ddc-ref-table td {
+      padding: 1.15rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem; font-weight: 300; color: var(--text);
+    }
+    .ddc-ref-table tr:last-child td { border-bottom: none; }
+    .ddc-ref-table td:first-child {
+      font-weight: 600; color: var(--ink); width: 30%;
+    }
+    .ddc-ref-table tr:hover td { background: var(--bg-warm); }
+
+    /* FINAL CTA */
+    .ddc-final { text-align: center; max-width: 680px; margin: 0 auto; }
+    .ddc-final h2 { color: white; }
+    .ddc-final p { margin: 1.25rem auto 2.5rem; color: rgba(255,255,255,0.65); }
+    .ddc-final .ddc-hero__btns { justify-content: center; }
+
+    /* BUTTONS (page-local — visual match to mockup) */
+    .ddc-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 28px; border-radius: 12px;
+      font-size: 0.9rem; font-weight: 600; text-decoration: none;
+      transition: all 0.25s; border: none; cursor: pointer;
+    }
+    .ddc-btn--white  { background: white; color: var(--ink); }
+    .ddc-btn--white:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+    .ddc-btn--glass  { background: rgba(255,255,255,0.07); color: white; border: 1px solid rgba(255,255,255,0.12); }
+    .ddc-btn--glass:hover { background: rgba(255,255,255,0.12); }
+    .ddc-btn--purple { background: var(--purple); color: white; }
+    .ddc-btn--purple:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(108,92,231,0.35); }
+
+    /* SKIP LINK (accessibility) */
+    .ddc-skip {
+      position: absolute; left: -9999px; top: 0;
+      background: var(--ink); color: white;
+      padding: 12px 20px; border-radius: 0 0 8px 0;
+      font-weight: 600; font-size: 0.9rem; z-index: 1000;
+    }
+    .ddc-skip:focus { left: 0; outline: 2px solid var(--purple); }
+
+    /* RESPONSIVE */
+    @media (max-width: 880px) {
+      .ddc-lead-cap__inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .ddc-q-card { grid-template-columns: 1fr; padding: 1.75rem; gap: 1rem; }
+      .ddc-q-num { font-size: 2.25rem; }
+      .ddc-q-num-wrap::after { display: none; }
+      .ddc-fee-mini { grid-template-columns: 1fr; }
+      .ddc-form-card { padding: 1.75rem; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Before You Choose a Crypto IRA: The Due Diligence Checklist",
+    "description": "The 10 questions every crypto IRA provider should be able to answer in writing. A free evaluation framework from BlockTrustIRA.",
+    "author": { "@type": "Organization", "name": "BlockTrustIRA" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "BlockTrustIRA",
+      "logo": { "@type": "ImageObject", "url": "https://blocktrustira.com/images/blocktrust-logo.png" }
+    },
+    "mainEntityOfPage": "https://blocktrustira.com/guides/due-diligence-checklist",
+    "url": "https://blocktrustira.com/guides/due-diligence-checklist"
+  }
+  </script>
 </head>
 <body>
+
+  <a href="#main" class="ddc-skip">Skip to main content</a>
 
   <!-- Navigation -->
   <nav class="nav">
@@ -69,182 +505,316 @@
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero hero--gradient">
-    <div class="container" style="max-width: 800px;">
-      <div class="section-tag section-tag--light">Free Download</div>
-      <h1>Before You Choose a Crypto IRA: The Due Diligence Checklist</h1>
-      <p class="lead" style="max-width: 600px;">Most providers hope you will not ask hard questions. This checklist ensures you do. Know exactly what to evaluate before committing your retirement savings.</p>
-    </div>
-  </section>
+  <main id="main">
 
-  <!-- Checklist Preview + Form -->
-  <section class="section reveal">
-    <div class="container">
-      <div class="grid grid--2" style="align-items: start; gap: 4rem;">
-        <!-- Checklist Preview -->
-        <div>
-          <div class="section-tag">What You Will Learn</div>
-          <h2>The Questions Most Investors Forget to Ask.</h2>
-          <p>This checklist covers the six critical areas that separate trustworthy providers from the rest.</p>
+    <!-- HERO -->
+    <section class="ddc-hero">
+      <div class="ddc-hero__inner">
+        <div class="ddc-hero__pill">
+          <span class="ddc-hero__dot"></span>
+          <span>Free Resource</span>
+        </div>
+        <h1>Before you choose a crypto IRA. <em>The due diligence checklist.</em></h1>
+        <p class="ddc-hero__sub">A retirement account is a 20-year decision. These are the questions every crypto IRA provider should be able to answer in writing. Including us.</p>
+        <div class="ddc-hero__btns">
+          <a href="#download" class="ddc-btn ddc-btn--purple">Download the Guide →</a>
+          <a href="#questions" class="ddc-btn ddc-btn--glass">See the 10 Questions</a>
+        </div>
+      </div>
+    </section>
 
-          <div style="margin-top: 2rem;">
-            <div class="card" style="margin-bottom: 1rem;">
-              <h4>1. What is the custody insurance amount?</h4>
-              <p>A specific dollar figure matters. Vague promises do not protect your assets.</p>
-            </div>
-            <div class="card" style="margin-bottom: 1rem;">
-              <h4>2. Who is the qualified custodian?</h4>
-              <p>Your assets should be legally separate from the platform. Verify the custodian independently.</p>
-            </div>
-            <div class="card" style="margin-bottom: 1rem;">
-              <h4>3. What are ALL the fees?</h4>
-              <p>Setup fees. Trading fees. Spread markups. Annual charges. Get the complete picture in writing.</p>
-            </div>
-            <div class="card" style="margin-bottom: 1rem;">
-              <h4>4. Is there a lock-up period?</h4>
-              <p>Some providers restrict withdrawals. Your retirement funds should remain accessible.</p>
-            </div>
-            <div class="card" style="margin-bottom: 1rem;">
-              <h4>5. How is the portfolio managed?</h4>
-              <p>Self-directed means unmanaged. Understand who or what is making allocation decisions.</p>
-            </div>
-            <div class="card" style="margin-bottom: 1rem;">
-              <h4>6. What happens during a market crash?</h4>
-              <p>Ask about risk management protocols. Silence on this topic is a red flag.</p>
+    <!-- WHY THIS EXISTS -->
+    <section class="ddc-sec">
+      <div class="ddc-narrow ddc-center">
+        <div class="ddc-tag">Why this exists</div>
+        <h2 class="ddc-h2">Most providers benefit from a confused buyer.</h2>
+      </div>
+      <div class="ddc-intro ddc-center" style="margin-top: 2rem;">
+        <p>Complex fee structures. Vague custody arrangements. Performance claims with no audit trail.</p>
+        <p>This checklist removes the confusion.</p>
+        <p>Take it to any provider you're evaluating. Ask the questions. Get answers in writing.</p>
+        <p>If a provider hesitates on any of them — that hesitation is your answer.</p>
+      </div>
+    </section>
+
+    <!-- QUESTIONS -->
+    <section class="ddc-sec ddc-sec--cool" id="questions">
+      <div class="ddc-wrap">
+        <div class="ddc-narrow ddc-center">
+          <div class="ddc-tag">The Checklist</div>
+          <h2 class="ddc-h2">The ten questions that matter.</h2>
+          <p class="ddc-lead" style="margin: 1.25rem auto 0;">Each one was designed to surface a structural truth most providers would prefer you didn't ask about.</p>
+        </div>
+
+        <div class="ddc-q-stack">
+
+          <!-- Q1 -->
+          <div class="ddc-q-card">
+            <div class="ddc-q-num-wrap"><div class="ddc-q-num">01</div></div>
+            <div class="ddc-q-body">
+              <h3>Is this a managed service — or a self-directed platform?</h3>
+              <p>The most important question. And the one most rarely asked.</p>
+              <p>A <a href="../managed-ira.html">self-directed platform</a> gives you a dashboard. You make every decision. You execute every trade.</p>
+              <p>A managed service handles allocation and rebalancing on your behalf.</p>
+              <p>These are different products. They serve different investors.</p>
+              <div class="ddc-answer">
+                <div class="ddc-answer__label">Our answer</div>
+                <p><strong>Managed.</strong> <a href="../animus/">Animus AI</a> monitors and rebalances continuously. Your job is to decide whether crypto belongs in your retirement plan. Our job is to manage it.</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Email Capture Form -->
-        <div>
-          <div class="card card--lg" style="position: sticky; top: 100px;">
-            <h3 style="margin-bottom: 0.5rem;">Download the Full Checklist</h3>
-            <p style="margin-bottom: 1.5rem;">Get the complete due diligence checklist with 20+ questions to ask any provider.</p>
-
-            <form>
-              <div class="form-group">
-                <label for="checklist-name">Full Name</label>
-                <input type="text" id="checklist-name" name="name" placeholder="Your full name" required>
+          <!-- Q2 -->
+          <div class="ddc-q-card">
+            <div class="ddc-q-num-wrap"><div class="ddc-q-num">02</div></div>
+            <div class="ddc-q-body">
+              <h3>Who actually holds your digital assets?</h3>
+              <p>The platform you sign up with is not necessarily the entity holding your crypto.</p>
+              <p>Look for a qualified custodian — a regulated institution whose only job is asset custody.</p>
+              <p>Verify it independently. Confirm assets are held in your name. In a segregated account. Not pooled with other clients.</p>
+              <div class="ddc-answer">
+                <div class="ddc-answer__label">Our answer</div>
+                <p>Your assets are held by <a href="../sfox/"><strong>sFOX</strong></a>, an institutional digital asset custodian. Cold storage. Segregated accounts in your name. <em>Not pooled. Not commingled.</em></p>
               </div>
-              <div class="form-group">
-                <label for="checklist-email">Email Address</label>
-                <input type="email" id="checklist-email" name="email" placeholder="you@example.com" required>
-              </div>
-              <button type="submit" class="btn btn--primary btn--lg" style="width: 100%;">Download the Checklist</button>
-            </form>
-
-            <p style="font-size: 0.78rem; color: var(--text-light); margin-top: 1rem; margin-bottom: 0;">No spam. Unsubscribe anytime. We respect your privacy.</p>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Trust Signals -->
-  <section class="section section--cool reveal">
-    <div class="container">
-      <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-        <div class="section-tag">Why Trust This Guide</div>
-        <h2>Written by Industry Practitioners.</h2>
-        <p>This checklist is based on real evaluation criteria used by institutional investors. It is not a sales tool. It is a decision-making framework.</p>
-      </div>
-      <div class="grid grid--3" style="margin-top: 2.5rem;">
-        <div class="card card--lg" style="text-align: center;">
-          <div class="card__icon card__icon--green" style="margin: 0 auto 1.25rem;">&#9745;</div>
-          <h4>Provider-Agnostic</h4>
-          <p>Use this checklist with any crypto IRA provider. It is designed to be objective.</p>
-        </div>
-        <div class="card card--lg" style="text-align: center;">
-          <div class="card__icon card__icon--purple" style="margin: 0 auto 1.25rem;">&#128218;</div>
-          <h4>Plain Language</h4>
-          <p>No jargon. Every question is written so any investor can understand it.</p>
-        </div>
-        <div class="card card--lg" style="text-align: center;">
-          <div class="card__icon card__icon--green" style="margin: 0 auto 1.25rem;">&#128274;</div>
-          <h4>Comprehensive</h4>
-          <p>Covers custody, fees, security, management, and regulatory compliance.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+          <!-- Q3 -->
+          <div class="ddc-q-card">
+            <div class="ddc-q-num-wrap"><div class="ddc-q-num">03</div></div>
+            <div class="ddc-q-body">
+              <h3>What is the specific insurance coverage?</h3>
+              <p>"Insured" is not an answer. You need a dollar figure.</p>
+              <p>You also need to know what's covered: theft, cybersecurity events, custodian insolvency.</p>
+              <p>Crypto IRAs are not FDIC or SIPC insured. Coverage comes through the custodian's policy.</p>
+              <div class="ddc-answer">
+                <div class="ddc-answer__label">Our answer</div>
+                <p>Up to <strong>$200 million</strong> in coverage on digital assets held through sFOX. <em>Subject to the terms of the custody agreement.</em></p>
+              </div>
+            </div>
+          </div>
 
-  <!-- Brief Visible Checklist -->
-  <section class="section reveal">
-    <div class="container" style="max-width: 800px;">
-      <div class="section-tag">Quick Reference</div>
-      <h2>The Essential Due Diligence Checklist</h2>
-      <p>A condensed version for immediate use. Download the full guide for detailed explanations.</p>
+          <!-- Q4 -->
+          <div class="ddc-q-card">
+            <div class="ddc-q-num-wrap"><div class="ddc-q-num">04</div></div>
+            <div class="ddc-q-body">
+              <h3>What is the complete fee structure — every fee?</h3>
+              <p>Ask for the full list in writing.</p>
+              <p>Setup fees. Annual maintenance. Trading fees. Spread markups. Custody fees. Performance fees. Exit fees.</p>
+              <p>Some providers bury costs in trading spreads. The rate on screen is not the rate you pay.</p>
+              <div class="ddc-answer">
+                <div class="ddc-answer__label">Our answer</div>
+                <div class="ddc-fee-mini">
+                  <div class="ddc-fee-mini__cell">
+                    <div class="ddc-fee-mini__num">0.5%</div>
+                    <div class="ddc-fee-mini__lbl">Quarterly management<br>(2% annual)</div>
+                  </div>
+                  <div class="ddc-fee-mini__cell">
+                    <div class="ddc-fee-mini__num">25%</div>
+                    <div class="ddc-fee-mini__lbl">Performance fee —<br>on profits only</div>
+                  </div>
+                  <div class="ddc-fee-mini__cell">
+                    <div class="ddc-fee-mini__num">0.14%</div>
+                    <div class="ddc-fee-mini__lbl">Trading fee<br>per transaction</div>
+                  </div>
+                </div>
+                <p><strong>No setup fees. No custody fees. No inactivity fees. No exit fees.</strong></p>
+                <p><em>That is the complete structure.</em></p>
+              </div>
+            </div>
+          </div>
 
-      <div style="margin-top: 2rem;">
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Category</th>
-                <th>Key Question</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Custody</strong></td>
-                <td>Who holds my assets, and are they a qualified custodian?</td>
-              </tr>
-              <tr>
-                <td><strong>Insurance</strong></td>
-                <td>What is the specific custody insurance amount in dollars?</td>
-              </tr>
-              <tr>
-                <td><strong>Fees</strong></td>
-                <td>What is the total annual cost including all hidden charges?</td>
-              </tr>
-              <tr>
-                <td><strong>Security</strong></td>
-                <td>What percentage of assets are in cold storage?</td>
-              </tr>
-              <tr>
-                <td><strong>Management</strong></td>
-                <td>Is the portfolio actively managed or self-directed?</td>
-              </tr>
-              <tr>
-                <td><strong>Liquidity</strong></td>
-                <td>Are there lock-up periods or withdrawal restrictions?</td>
-              </tr>
-              <tr>
-                <td><strong>Track Record</strong></td>
-                <td>How long has the provider been operating?</td>
-              </tr>
-              <tr>
-                <td><strong>Reporting</strong></td>
-                <td>What reporting do I receive, and how often?</td>
-              </tr>
-              <tr>
-                <td><strong>Risk</strong></td>
-                <td>What risk management protocols are in place?</td>
-              </tr>
-              <tr>
-                <td><strong>Compliance</strong></td>
-                <td>Is the provider registered with relevant regulators?</td>
-              </tr>
-            </tbody>
-          </table>
+          <!-- Q5 -->
+          <div class="ddc-q-card">
+            <div class="ddc-q-num-wrap"><div class="ddc-q-num">05</div></div>
+            <div class="ddc-q-body">
+              <h3>Are the provider's fees aligned with your outcome?</h3>
+              <p>Most financial products charge the same whether you grow or lose.</p>
+              <p>That's a structural conflict of interest.</p>
+              <p>Ask whether the provider's revenue is linked to your account's performance.</p>
+              <div class="ddc-answer">
+                <div class="ddc-answer__label">Our answer</div>
+                <p>Our performance fee only triggers when your account grows. If it doesn't grow, we don't earn it.</p>
+                <p>We call this the <a href="../our-fees.html"><strong>Zero-Conflict Model</strong></a>.</p>
+                <p><em>Most providers profit when you trade. We profit when you grow.</em></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q6 -->
+          <div class="ddc-q-card">
+            <div class="ddc-q-num-wrap"><div class="ddc-q-num">06</div></div>
+            <div class="ddc-q-body">
+              <h3>How is the portfolio actually managed?</h3>
+              <p>If a provider claims active management, ask how.</p>
+              <p>Manual decisions by a person? Algorithmic? Some combination?</p>
+              <p>Who has discretion. When do they act. What rules govern execution.</p>
+              <div class="ddc-answer">
+                <div class="ddc-answer__label">Our answer</div>
+                <p><strong>Animus AI</strong> runs continuous monitoring across on-chain data, trading volume, price momentum, and institutional flows.</p>
+                <p>When defined thresholds are met, the system rebalances.</p>
+                <p><em>Systematic. Not discretionary.</em></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q7 -->
+          <div class="ddc-q-card">
+            <div class="ddc-q-num-wrap"><div class="ddc-q-num">07</div></div>
+            <div class="ddc-q-body">
+              <h3>What happens during a market crash?</h3>
+              <p>Crypto markets move fast. Drawdowns can be severe.</p>
+              <p>Ask what protocols apply in those moments. Silence on this question is itself an answer.</p>
+              <div class="ddc-answer">
+                <div class="ddc-answer__label">Our answer</div>
+                <p>Systematic rebalancing continues 24/7. The methodology is designed to capture opportunity and limit downside through <strong>process — not prediction</strong>.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q8 -->
+          <div class="ddc-q-card">
+            <div class="ddc-q-num-wrap"><div class="ddc-q-num">08</div></div>
+            <div class="ddc-q-body">
+              <h3>How quickly can you access your money?</h3>
+              <p>Some providers introduce withdrawal restrictions or lock-up periods.</p>
+              <p>Your retirement funds should remain accessible. Subject only to IRS rules.</p>
+              <p>Ask about the timeline between liquidation request and cash settling in your IRA.</p>
+              <div class="ddc-answer">
+                <div class="ddc-answer__label">Our answer</div>
+                <p>Digital assets can be sold back to cash through sFOX <strong>the day you request it</strong>. Once settled, funds return to your IRA. Standard IRA withdrawal rules then apply.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q9 -->
+          <div class="ddc-q-card">
+            <div class="ddc-q-num-wrap"><div class="ddc-q-num">09</div></div>
+            <div class="ddc-q-body">
+              <h3>What's the rollover or transfer process?</h3>
+              <p>If you're moving from an existing 401(k) or IRA, this should be a non-event.</p>
+              <p>Done correctly, a <a href="../learn/rollover-401k-to-crypto-ira.html">rollover</a> doesn't trigger a tax event.</p>
+              <p>Ask whether the provider handles the paperwork end-to-end — or whether you're responsible for chasing your existing custodian.</p>
+              <div class="ddc-answer">
+                <div class="ddc-answer__label">Our answer</div>
+                <p>We manage the rollover process directly with your existing custodian. <strong>White-glove service</strong> from start to finish. <em>No tax event, when handled correctly.</em></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q10 -->
+          <div class="ddc-q-card">
+            <div class="ddc-q-num-wrap"><div class="ddc-q-num">10</div></div>
+            <div class="ddc-q-body">
+              <h3>Is the structure IRS-approved?</h3>
+              <p>In 2014, the IRS confirmed that digital assets can be held inside a <a href="../learn/crypto-ira-for-beginners.html">self-directed IRA</a>.</p>
+              <p>That's been settled law for over a decade. Same rules. Same tax treatment as any other IRA.</p>
+              <p>Confirm the provider works exclusively with IRS-approved custodians.</p>
+              <div class="ddc-answer">
+                <div class="ddc-answer__label">Our answer</div>
+                <p><strong>Yes.</strong> All accounts are established as self-directed IRAs in accordance with IRS rules. We work only with IRS-approved custodians.</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA Section -->
-  <section class="cta-section section--purple-bg reveal">
-    <div class="container">
-      <div class="section-tag">Take the Next Step</div>
-      <h2>Schedule a Consultation</h2>
-      <p class="lead">Have questions about our due diligence standards? We welcome the scrutiny.</p>
-      <div class="hero__actions" style="justify-content: center;">
-        <a href="../contact.html" class="btn btn--primary btn--lg">Schedule a Consultation</a>
-        <a href="../how-it-works.html" class="btn btn--outline btn--lg">See How It Works</a>
+    <!-- LEAD CAPTURE -->
+    <section class="ddc-sec ddc-lead-cap" id="download">
+      <div class="ddc-lead-cap__inner">
+        <div class="ddc-lead-cap__left">
+          <div class="ddc-tag ddc-tag--light">Free download · 2026 edition</div>
+          <h2>Want to go deeper? Read the full Guide.</h2>
+          <p>You've seen the questions. The BlockTrust Crypto IRA Guide is the long-form answer — written for retirement investors, not crypto traders.</p>
+          <ul class="ddc-lead-cap__bullets">
+            <li>What a Crypto IRA actually is — and what it isn't</li>
+            <li>How institutional custody and insurance really work</li>
+            <li>The tax advantages of holding crypto inside an IRA</li>
+            <li>The Zero-Conflict Model, explained in full</li>
+            <li>How Animus AI handles 24/7 portfolio management</li>
+          </ul>
+        </div>
+
+        <div class="ddc-form-card">
+          <div class="ddc-form-card__head">
+            <div class="ddc-pdf-preview" aria-hidden="true"></div>
+            <div>
+              <h4>The BlockTrust Crypto IRA Guide</h4>
+              <p>PDF · 2026 Edition · Free</p>
+            </div>
+          </div>
+
+          <form name="due-diligence-checklist" data-page-source="due-diligence-checklist" data-segment="Segment_1_Traditionalist">
+            <div class="ddc-field">
+              <label for="ddc-name">Full Name</label>
+              <input type="text" id="ddc-name" name="name" placeholder="Robert Anderson" required autocomplete="name">
+            </div>
+            <div class="ddc-field">
+              <label for="ddc-email">Email Address</label>
+              <input type="email" id="ddc-email" name="email" placeholder="r.anderson@email.com" required autocomplete="email">
+            </div>
+            <button type="submit" class="ddc-submit" aria-label="Submit form to download the BlockTrust Crypto IRA Guide">Send Me the Guide →</button>
+            <p class="ddc-form-trust">No spam. No follow-up sales pressure. We respect your inbox.</p>
+          </form>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- WHY WE PUBLISH -->
+    <section class="ddc-sec ddc-sec--dark">
+      <div class="ddc-publish">
+        <div class="ddc-tag ddc-tag--light" style="justify-content: center; display: inline-flex;">Why we publish this</div>
+        <p>"Most marketing materials are designed to obscure. This one is designed to inform.</p>
+        <p>If you ask us these questions and don't like our answers — you should walk away.</p>
+        <p style="margin-top: 1.5rem;">That is the test. We welcome it."</p>
+        <span class="ddc-publish__attr">— The BlockTrustIRA team</span>
+      </div>
+    </section>
+
+    <!-- QUICK REFERENCE -->
+    <section class="ddc-sec ddc-sec--warm">
+      <div class="ddc-narrow ddc-center">
+        <div class="ddc-tag">Quick reference</div>
+        <h2 class="ddc-h2">The essential checklist at a glance.</h2>
+        <p class="ddc-lead" style="margin: 1.25rem auto 0;">A one-page version to take into any conversation.</p>
+      </div>
+      <div class="ddc-ref-wrap">
+        <table class="ddc-ref-table">
+          <thead>
+            <tr><th>Category</th><th>Question to ask</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Service model</td><td>Managed or self-directed?</td></tr>
+            <tr><td>Custody</td><td>Who holds the assets — and are they segregated?</td></tr>
+            <tr><td>Insurance</td><td>What is the specific dollar coverage amount?</td></tr>
+            <tr><td>Fees</td><td>What is the complete fee structure in writing?</td></tr>
+            <tr><td>Alignment</td><td>Are provider fees linked to account performance?</td></tr>
+            <tr><td>Management</td><td>How are allocation decisions actually made?</td></tr>
+            <tr><td>Risk</td><td>What protocols apply during market crashes?</td></tr>
+            <tr><td>Liquidity</td><td>What is the withdrawal timeline?</td></tr>
+            <tr><td>Rollover</td><td>Does the provider handle paperwork end-to-end?</td></tr>
+            <tr><td>Compliance</td><td>Is the structure IRS-approved?</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="ddc-sec ddc-sec--dark">
+      <div class="ddc-final">
+        <div class="ddc-tag ddc-tag--light" style="justify-content: center; display: inline-flex;">Next step</div>
+        <h2 class="ddc-h2">Have questions about our due diligence standards?</h2>
+        <p class="ddc-lead">We welcome the scrutiny. A 30-minute conversation. No cost. No obligation. No pressure.</p>
+        <div class="ddc-hero__btns">
+          <a href="../contact.html" class="ddc-btn ddc-btn--white">Schedule a Consultation</a>
+          <a href="../how-it-works.html" class="ddc-btn ddc-btn--glass">See How It Works</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
@@ -289,6 +859,7 @@
             <li><a href="../learn/is-crypto-ira-safe.html">Is a Crypto IRA Safe?</a></li>
             <li><a href="../learn/bitcoin-etf-vs-bitcoin-ira.html">Bitcoin ETF vs IRA</a></li>
             <li><a href="../guides/before-you-open.html">Before You Open</a></li>
+            <li><a href="../guides/due-diligence-checklist.html">Due Diligence Checklist</a></li>
             <li><a href="../compare/best-crypto-ira-companies.html">Compare Providers</a></li>
           </ul>
         </div>
@@ -299,27 +870,6 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    // Scroll reveal animation
-    const revealElements = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.12 });
-    revealElements.forEach(el => observer.observe(el));
-
-    // FAQ accordion
-    document.querySelectorAll('.faq-question').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.parentElement;
-        item.classList.toggle('active');
-      });
-    });
-  </script>
 
 </body>
 </html>
